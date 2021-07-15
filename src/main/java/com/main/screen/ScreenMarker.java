@@ -37,7 +37,7 @@ public class ScreenMarker {
           frame.setUndecorated(true);
           frame.setBackground(new Color(0, 0, 0, 0));
           frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-          frame.add(new TestPane(x, y, w, h));
+          frame.add(new CustomPanel(x, y, w, h));
           frame.setAlwaysOnTop(true);
           frame.pack();
           frame.setVisible(true);
@@ -46,11 +46,11 @@ public class ScreenMarker {
 }
 
 @Setter
-class TestPane extends JPanel {
+class CustomPanel extends JPanel {
 
   private int x, y, w, h;
 
-  public TestPane(int x, int y, int w, int h) {
+  public CustomPanel(int x, int y, int w, int h) {
     this.setX(x);
     this.setY(y);
     this.setW(w);
